@@ -1,11 +1,15 @@
-function App() {
+import React, { useState} from "react";
+import "./App.css";
+import Child from "./child";
+const App = () => {
+    const [count, setCount] = usestate(0);
+
   return (
-    <div style={{textAlign:'center', padding:'50px'}}>
-      <h1>🍕 Pizza - ₹199</h1>
-      <button onClick={() => alert('Pizza Ordered!')}>
-        Order Now
-      </button>
+    <div>
+      <h2>{count}</h2>
+    <child count={count} counter={setcount}/> 
     </div>
   );
-}
+};
+
 export default App;
